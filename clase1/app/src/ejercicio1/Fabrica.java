@@ -1,4 +1,5 @@
-import ejercicio1.*;
+package ejercicio1;
+
 
 public class Fabrica {
     final String pizzaMuzzarella(){

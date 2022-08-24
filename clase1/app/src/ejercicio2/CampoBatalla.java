@@ -16,6 +16,6 @@ public class CampoBatalla {
         peleador2.atacar(peleador1);
 
 
-        System.out.println("La vida del peleador "+peleador1.getNombre() +"es: "+  peleador1.getVida() + " peleador2.getNombre() es: " +peleador2.getVida());
+        System.out.println("La vida del peleador "+peleador1.getNombre() +"es: "+peleador1.getVida() + "\n" + "La vida del peleador " +peleador2.getNombre() +"es: " +peleador2.getVida());
     }
 }
