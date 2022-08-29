@@ -2,5 +2,5 @@ package ejercicio2.Chinpokomons;
 
 interface ChinpokomonActions{
 
-     void atacar();
+     void atacar(Chinpokomon chinpokomon);
 }

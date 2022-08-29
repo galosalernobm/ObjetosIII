@@ -1,9 +1,23 @@
 package ejercicio2.Chinpokomons;
 
-public abstract class Chinpokomon {
+import ejercicio2.Ataques.Ataque;
+
+import java.util.List;
+
+public abstract class Chinpokomon implements ChinpokomonActions{
     private Integer vida;
     private String nombre;
     private Boolean isDeath;
+    private List<Ataque> ataques;
+
+    public List<Ataque> getAtaques() {
+        return ataques;
+    }
+
+    public void setAtaques(List<Ataque> ataques) {
+        this.ataques = ataques;
+    }
+
     public Chinpokomon() {
 
     }
@@ -15,9 +29,8 @@ public abstract class Chinpokomon {
             this.setVida(this.vida - damage);
         }
     }
-    public void atacar(Chinpokomon chinpokomon){
+    public abstract void atacar(Chinpokomon chinpokomon);
 
-    }
     public Integer getVida() {
         return vida;
     }

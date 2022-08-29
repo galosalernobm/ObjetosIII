@@ -1,21 +1,28 @@
 package ejercicio2.Chinpokomons;
 
-public class Carnotron extends Chinpokomon {
+import ejercicio2.Ataques.Ataque;
+import ejercicio2.Ataques.CañonConico;
+import ejercicio2.Ataques.RayoVeloz;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Carnotron extends Chinpokomon implements ChinpokomonActions{
 
     public Carnotron() {
         this.setVida(20);
         this.setNombre("Carnotron");
+        final List<Ataque> ataques = new ArrayList<>();
+        final CañonConico cañonConico = new CañonConico();
+        final RayoVeloz rayoVeloz = new RayoVeloz();
+        ataques.add(cañonConico);
+        ataques.add(rayoVeloz);
+        this.setAtaques(ataques);
+    }
 
-    }
-    private void rayoVeloz(Chinpokomon chinpokomon){
-        chinpokomon.dealDamage(3);
-    }
-    private void cañonConico(Chinpokomon chinpokomon){
-        chinpokomon.dealDamage(4);
-    }
     @Override
     public void atacar(Chinpokomon chinpokomon) {
-        this.rayoVeloz(chinpokomon);
-        this.cañonConico(chinpokomon);
+       this.getAtaques().forEach(ataque -> chinpokomon.dealDamage(ataque.getDamage()));
+
     }
 }
