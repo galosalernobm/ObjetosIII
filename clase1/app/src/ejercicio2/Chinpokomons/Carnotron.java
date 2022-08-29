@@ -6,6 +6,7 @@ import ejercicio2.Ataques.RayoVeloz;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Carnotron extends Chinpokomon implements ChinpokomonActions{
 
@@ -20,9 +21,4 @@ public class Carnotron extends Chinpokomon implements ChinpokomonActions{
         this.setAtaques(ataques);
     }
 
-    @Override
-    public void atacar(Chinpokomon chinpokomon) {
-       this.getAtaques().forEach(ataque -> chinpokomon.dealDamage(ataque.getDamage()));
-
-    }
 }

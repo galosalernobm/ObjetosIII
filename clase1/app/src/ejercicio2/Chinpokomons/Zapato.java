@@ -16,10 +16,4 @@ public class Zapato extends Chinpokomon implements ChinpokomonActions{
         this.setAtaques(ataques);
     }
 
-
-    public void atacar(Chinpokomon chinpokomon) {
-        this.getAtaques().forEach(ataque -> {
-            chinpokomon.dealDamage(ataque.getDamage());
-        });
-    }
 }
