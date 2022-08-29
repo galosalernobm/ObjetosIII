@@ -21,19 +21,19 @@ public abstract class Chinpokomon implements ChinpokomonActions{
     public Chinpokomon() {
         this.isDeath = false;
     }
-    public void dealDamage(Ataque ataque){
-        if(this.getVida() - ataque.getDamage() < 0){
+    public void dealDamage(int damage){
+        if(this.getVida() - damage < 0){
             setDeath(true);
             this.setVida(0);
         }else {
-            this.setVida(this.vida - ataque.getDamage());
+            this.setVida(this.vida - damage);
         }
     }
     public void atacar(Chinpokomon chinpokomon){
         final int max = this.getAtaques().size()-1;
         final int random = (int)Math.floor(Math.random()*(max+1));
         final Ataque ataque = this.getAtaques().get(random);
-        chinpokomon.dealDamage(ataque);
+        ataque.realizarAtaque(chinpokomon);
     }
 
     public Integer getVida() {

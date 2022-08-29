@@ -14,8 +14,8 @@ public class main {
             final Chinpokomon zapato = new Zapato();
             final Chinpokomon gallotronix = new Gallotronix();
 
-//            final CampoBatalla campoBatalla = new CampoBatalla(carnotron, zapato);
-            final CampoBatalla campoBatalla = new CampoBatalla(carnotron, gallotronix);
+            final CampoBatalla campoBatalla = new CampoBatalla(carnotron, zapato);
+//            final CampoBatalla campoBatalla = new CampoBatalla(carnotron, gallotronix);
 
             campoBatalla.comenzarPelea();
         }catch (Error err){

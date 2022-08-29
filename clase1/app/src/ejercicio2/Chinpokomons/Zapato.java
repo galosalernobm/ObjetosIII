@@ -5,6 +5,7 @@ import ejercicio2.Ataques.Zapatazo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Zapato extends Chinpokomon implements ChinpokomonActions{
     public Zapato(){
